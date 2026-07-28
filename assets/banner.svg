@@ -5,7 +5,7 @@
       <stop offset="100%" stop-color="#009ffd" />
     </linearGradient>
     <style>
-      .title { font: bold 40px sans-serif; fill: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+      .title { font: bold 36px sans-serif; fill: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
       .subtitle { font: 20px sans-serif; fill: #e0e0e0; }
       @keyframes float {
         0% { transform: translateY(0px); }
