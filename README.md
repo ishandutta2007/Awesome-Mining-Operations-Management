@@ -25,44 +25,21 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[Hexagon Mining](https://hexagon.com/products/product-groups/mining)**  
-  Integrated life-of-mine solutions covering mine planning (HxGN MinePlan), fleet management (OP Pro / UG Pro), drill & blast, survey, monitoring, and collision avoidance.
-
-- **[MineRP (Powered by Epiroc)](https://www.epiroc.com)**  
-  Open OT platform unifying technical mining data with ERP systems; includes Enterprise Production Scheduler and short-interval control for open-pit and underground operations.
-
-- **[RPMGlobal](https://rpmglobal.com/)**  
-  Enterprise mining software suite spanning strategic & tactical scheduling (MinePlanner, XECUTE), simulation (HAULSIM), asset maintenance (AMT), and cost modelling.
-
-- **[Micromine](https://www.micromine.com/)**  
-  End-to-end ecosystem for exploration, geological modelling (Origin), mine design & planning (Beyond, Alastri, Spry, Advance), and production control (Pitram).
-
-- **[Deswik (Sandvik)](https://www.deswik.com/)**  
-  Comprehensive CAD, design, scheduling, and operational planning platform (Spatial, Planning, OPS, GO) for open-pit and underground mines.
-
-- **[Datamine](https://dataminesoftware.com/)**  
-  Connected suite for geology, resource modelling, strategic & detailed planning, production, and laboratory management across the mining value chain.
-
-- **[Maptek](https://www.maptek.com/)**  
-  3D mine planning and geological modelling (Vulcan), scheduling (Evolution), laser scanning/survey (PointStudio), and drill & blast (BlastLogic).
-
-- **[MineSense](https://minesense.com/)**  
-  Real-time sensor-based ore characterisation and sorting (ShovelSense) for grade control, dilution reduction, and smart truck routing at the face.
-
-- **[GroundHog](https://groundhogapps.com/)**  
-  AI-powered mining operations platform for short-interval control, fleet management, maintenance, safety, and real-time location systems.
-
-- **[Minemax](https://www.minemax.com/)** (now part of Datamine)  
-  Strategic mine schedule optimisation (Minemax Scheduler) and detailed open-pit planning (Tempo) focused on NPV maximisation.
-
-- **[Seequent (Bentley)](https://www.seequent.com/)**  
-  Implicit geological modelling and resource estimation (Leapfrog Geo & Edge), data management (Central, MX Deposit), and geoscience collaboration platform (Evo).
-
-- **[GEOVIA (Dassault Systèmes)](https://www.3ds.com/products/geovia)**  
-  Geology modelling, pit optimisation (Whittle), scheduling (MineSched), and collaborative mine planning on the 3DEXPERIENCE platform (Surpac and related roles).
-
-- **[EarthSoft](https://earthsoft.com/)**  
-  EQuIS environmental data management platform widely used by mining companies for water quality, compliance, sustainability reporting, and regulatory workflows.
+| Product | Description | Pricing |
+| :--- | :--- | :--- |
+| **[Hexagon Mining](https://hexagon.com/products/product-groups/mining)** | Integrated life-of-mine solutions covering mine planning (HxGN MinePlan), fleet management (OP Pro / UG Pro), drill & blast, survey, monitoring, and collision avoidance. | Contact for Pricing |
+| **[MineRP (Powered by Epiroc)](https://www.epiroc.com)** | Open OT platform unifying technical mining data with ERP systems; includes Enterprise Production Scheduler and short-interval control for open-pit and underground operations. | Contact for Pricing |
+| **[RPMGlobal](https://rpmglobal.com/)** | Enterprise mining software suite spanning strategic & tactical scheduling (MinePlanner, XECUTE), simulation (HAULSIM), asset maintenance (AMT), and cost modelling. | Contact for Pricing |
+| **[Micromine](https://www.micromine.com/)** | End-to-end ecosystem for exploration, geological modelling (Origin), mine design & planning (Beyond, Alastri, Spry, Advance), and production control (Pitram). | Contact for Pricing |
+| **[Deswik (Sandvik)](https://www.deswik.com/)** | Comprehensive CAD, design, scheduling, and operational planning platform (Spatial, Planning, OPS, GO) for open-pit and underground mines. | Contact for Pricing |
+| **[Datamine](https://dataminesoftware.com/)** | Connected suite for geology, resource modelling, strategic & detailed planning, production, and laboratory management across the mining value chain. | Contact for Pricing |
+| **[Maptek](https://www.maptek.com/)** | 3D mine planning and geological modelling (Vulcan), scheduling (Evolution), laser scanning/survey (PointStudio), and drill & blast (BlastLogic). | Contact for Pricing |
+| **[MineSense](https://minesense.com/)** | Real-time sensor-based ore characterisation and sorting (ShovelSense) for grade control, dilution reduction, and smart truck routing at the face. | Contact for Pricing |
+| **[GroundHog](https://groundhogapps.com/)** | AI-powered mining operations platform for short-interval control, fleet management, maintenance, safety, and real-time location systems. | Contact for Pricing |
+| **[Minemax](https://www.minemax.com/)** (now part of Datamine) | Strategic mine schedule optimisation (Minemax Scheduler) and detailed open-pit planning (Tempo) focused on NPV maximisation. | Contact for Pricing |
+| **[Seequent (Bentley)](https://www.seequent.com/)** | Implicit geological modelling and resource estimation (Leapfrog Geo & Edge), data management (Central, MX Deposit), and geoscience collaboration platform (Evo). | Contact for Pricing |
+| **[GEOVIA (Dassault Systèmes)](https://www.3ds.com/products/geovia)** | Geology modelling, pit optimisation (Whittle), scheduling (MineSched), and collaborative mine planning on the 3DEXPERIENCE platform (Surpac and related roles). | Contact for Pricing |
+| **[EarthSoft](https://earthsoft.com/)** | EQuIS environmental data management platform widely used by mining companies for water quality, compliance, sustainability reporting, and regulatory workflows. | Contact for Pricing |
 
 ## Open-Source GitHub Projects
 
