@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a72" />
+      <stop offset="100%" stop-color="#009ffd" />
+    </linearGradient>
+    <style>
+      .title { font: bold 40px sans-serif; fill: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+      .subtitle { font: 20px sans-serif; fill: #e0e0e0; }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .animated { animation: float 3s ease-in-out infinite; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" rx="15" />
+  <g class="animated">
+    <text x="400" y="100" class="title" text-anchor="middle">Awesome Mining Operations Management</text>
+    <text x="400" y="140" class="subtitle" text-anchor="middle">Curated list of SaaS &amp; Open-Source Projects</text>
+  </g>
+</svg>

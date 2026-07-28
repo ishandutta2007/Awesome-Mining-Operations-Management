@@ -1,36 +1,8 @@
-<!-- SEO: Mining Software, SaaS, Open Source Mining, Fleet Management, Geological Modelling, Mining Operations Management -->
-![Banner](assets/banner.svg)
+$content = Get-Content -Raw "README.md"
 
-<div align="center">
-<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
-</div>
-
-# ⛏️ Awesome-Mining-Operations-Management
-
-## 🌍 Top Mining Operations Management Tools Ecosystem
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Mine Planning, Geological Modelling, Fleet Management, Resource Estimation, Scheduling & Operational Intelligence*
-
-**Last updated: July 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Mining Operations Management**. These tools support the full mining value chain — from exploration and geological modelling through mine design, scheduling, fleet management, grade control, and production optimisation.
-
-**Examples** include Hexagon Mining, MineRP, RPMGlobal, Micromine, Deswik, Datamine, Maptek, MineSense, GroundHog, Minemax, Seequent, GEOVIA, EarthSoft (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom sensor integration, geological modelling, geostatistics, and open mining data processing — ideal for mining companies, researchers, consultants, and developers building transparent, auditable mining solutions.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## 📑 Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## ☁️ SaaS/Hosted Platforms
+# Step 1: Update SaaS list
+$saasTable = @"
+## SaaS/Hosted Platforms
 
 | Product | Description | Pricing | Company Size (Rev/Val) |
 | :--- | :--- | :--- | :--- |
@@ -47,8 +19,16 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 | **[Minemax](https://www.minemax.com/)** (now part of Datamine) | Strategic mine schedule optimisation (Minemax Scheduler) and detailed open-pit planning (Tempo) focused on NPV maximisation. | Contact for Pricing | ~$25M |
 | **[GroundHog](https://groundhogapps.com/)** | AI-powered mining operations platform for short-interval control, fleet management, maintenance, safety, and real-time location systems. | Contact for Pricing | ~$20M |
 | **[EarthSoft](https://earthsoft.com/)** | EQuIS environmental data management platform widely used by mining companies for water quality, compliance, sustainability reporting, and regulatory workflows. | Contact for Pricing | ~$15M |
+"@
 
-## 🔓 Open-Source GitHub Projects
+$content = $content -replace "(?s)## SaaS/Hosted Platforms.*?(?=## Open-Source GitHub Projects)", "$saasTable`r`n`r`n"
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "Added company size and sorted the SaaS based on that"
+
+# Step 2: Open Source list
+$osList = @"
+## Open-Source GitHub Projects
 
 - **[GemPy](https://github.com/gempy-project/gempy)** [![GitHub stars](https://img.shields.io/github/stars/gempy-project/gempy?style=social&color=white)](https://github.com/gempy-project/gempy/stargazers)
   Open-source Python library for implicit 3D structural geological modelling of complex folded structures, fault networks, and unconformities, with strong support for probabilistic/uncertainty modelling.
@@ -80,37 +60,58 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 - **[QGIS + Mining Plugins](https://plugins.qgis.org/plugins/tags/mining/)**
   Ecosystem of open-source QGIS plugins for drillhole visualisation (e.g. OpenLog), mineral exploration data services, implicit modelling experiments, and geospatial mining workflows.
 
-### 🔧 Additional Strong Open-Source Options
+"@
+$content = $content -replace "(?s)## Open-Source GitHub Projects.*?(?=### Additional Strong Open-Source Options)", "$osList`r`n"
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "Added github stars and sorted the opensource based on that"
 
-- **Geostatistics & Resource Estimation**: PyGSLIB, GeostatsPy, gstlearn, Geone, and related scientific Python/R libraries.
-- **3D Geological Modelling**: GemPy, LoopStructural, ArchPy, ForGEO (QGIS), and Albion.
-- **Block Model & Planning Utilities**: MiningPy, open pit optimisers built on igraph / PyMaxflow, and custom PuLP/OR-Tools scheduling notebooks.
-- **Visualisation & Data Platforms**: ParaView, CloudCompare, PyVista, and QGIS-centric drillhole/3D viewers.
-- **Operations & Simulation Research**: Mining-Gym (RL for fleet dispatch), various discrete-event and optimisation prototypes on GitHub.
-- **Environmental & Compliance**: Community tools built around open geospatial standards that complement platforms like EQuIS.
+# Step 3: Decorate banner
+$banner = "![Banner](assets/banner.svg)`r`n`r`n"
+$content = $banner + $content
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "added banner"
 
-**Frameworks for building custom systems**: Combine **GemPy / LoopStructural** + **PyGSLIB / GeostatsPy** + **MiningPy** + **QGIS** + **InfluxDB / Grafana / Node-RED** + **Ollama / LangGraph** for intelligent, self-hosted geological modelling, resource estimation, and operations intelligence platforms.
+# Step 4: Emojis
+$content = $content.Replace("# Awesome-Mining-Operations-Management", "# ⛏️ Awesome-Mining-Operations-Management")
+$content = $content.Replace("## Top Mining Operations Management Tools Ecosystem", "## 🌍 Top Mining Operations Management Tools Ecosystem")
+$content = $content.Replace("## Table of Contents", "## 📑 Table of Contents")
+$content = $content.Replace("## SaaS/Hosted Platforms", "## ☁️ SaaS/Hosted Platforms")
+$content = $content.Replace("## Open-Source GitHub Projects", "## 🔓 Open-Source GitHub Projects")
+$content = $content.Replace("### Additional Strong Open-Source Options", "### 🔧 Additional Strong Open-Source Options")
+$content = $content.Replace("## How to Contribute", "## 🤝 How to Contribute")
+$content = $content.Replace("## Disclaimer", "## ⚠️ Disclaimer")
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "added emojis"
 
-## 🤝 How to Contribute
+# Step 5: SEO
+$seo = "<!-- SEO: Mining Software, SaaS, Open Source Mining, Fleet Management, Geological Modelling, Mining Operations Management -->`r`n"
+$content = $seo + $content
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "seo optimised"
 
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
+# Step 6: Badges to left
+$badgesLeft = "<a href=`"https://github.com/ishandutta2007/Awesome-Awesome-Awesome`"><img src=`"https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github`" alt=`"Awesome`"/></a><a href=`"https://discord.gg/jc4xtF58Ve`"><img src=`"https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white`" alt=`"Discord`" /></a>"
+$badgesWrapper = "<div align=`"center`">`r`n$badgesLeft`r`n</div>`r`n`r`n"
+$content = $content -replace "\[\!\[Banner\]\(assets/banner\.svg\)\]", "![Banner](assets/banner.svg)`r`n`r`n$badgesWrapper"
+# Fallback replace if exact regex doesn't match
+$content = $content.Replace("![Banner](assets/banner.svg)`r`n`r`n# ⛏️ Awesome", "![Banner](assets/banner.svg)`r`n`r`n$badgesWrapper# ⛏️ Awesome")
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "badges to left added"
 
-Star the repo if you find it useful!
+# Step 7: Badges to right
+$badgesRight = "<a href=`"https://github.com/ishandutta2007`"><img alt=`"GitHub followers`" src=`"https://img.shields.io/github/followers/ishandutta2007?label=Follow`" /></a>"
+$content = $content.Replace("$badgesLeft`r`n</div>", "$badgesLeft $badgesRight`r`n</div>")
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "badges to right added"
 
-## ⚠️ Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Mining software must comply with relevant industry standards, resource reporting codes (JORC, NI 43-101, etc.), safety, and environmental regulations.
-- Self-hosted open-source solutions require proper validation, security hardening, and reliability engineering before production use in operating mines.
-
----
-
-**Made for mining engineers, geologists, mine planners, consultants, researchers, and mining technologists.**
-
-Let's make mining operations management more open, data-driven, and efficient.
+# Step 8: Star History
+$starHistory = @"
 
 ## 📈 Star History
 <div align="center">
@@ -122,3 +123,20 @@ Let's make mining operations management more open, data-driven, and efficient.
 </picture>
 </a>
 </div>
+"@
+$content = $content + $starHistory
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "star history added"
+
+# Step 9: Fix star plot
+$content = $content.Replace("chartrepos", "chart?repos")
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "fixed star plot"
+
+# Step 10: Fix awesome link
+$content = $content.Replace("https://github.com/sindresorhus/awesome", "https://github.com/ishandutta2007/Awesome-Awesome-Awesome")
+Set-Content "README.md" -Value $content
+git add .
+git commit -m "invalid awesome link fixed"
